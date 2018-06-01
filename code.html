@@ -1,0 +1,26 @@
+<html>
+<head>
+<script src="jquery.min.js"></script>
+<script src="highlight.pack.js"></script>
+<link rel="stylesheet" href="styles/default.css">
+<script>
+hljs.tabReplace = '    ';
+hljs.initHighlightingOnLoad();
+</script>
+</head>
+<body>
+	<pre>
+		<code class="javascript">procedure divideRounds
+
+for each event x
+	r <- max round of parents of x (or 1 if none exist)
+	if x can strongly see more than 2n/3 round r witnesses
+		x.round <- r+1
+	else
+	  x.round <- r
+	x.witness <- (x has no self parent)
+				  or (x.round > x.selfParent.round) 
+		</code>
+	</pre>
+</body>
+</html>
